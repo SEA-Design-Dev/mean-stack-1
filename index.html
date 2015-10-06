@@ -8,96 +8,91 @@
     <!-- <link rel='stylesheet' href='css/stylesheet.css' type='text/css'> -->
   </head>
   <body>
-      <header>
-        <h1>intelly</h1>
-        <nav>
-          <ul class="site-nav">
+    <header>
+      <h1>intelly</h1>
+      <nav>
+        <ul class="site-nav">
+          <li>HOME</li>
+          <li>PAGES</li>
+          <li>BLOG</li>
+          <li>PORTFOLIO</li>
+          <li>SHORTCODES</li>
+          <li>FEATURES</li>
+          <li>CONTACT</li>
+        </ul>
+      </nav>
+    </header>
+
+    <article class="content">
+      <hgroup>
+        <h1>Blog</h1>
+        <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque aliquam, ligula ut lacinia sollicitudin, orci ex mollis ante, eget fringilla tellus nisi non justo. Aenean egestas sollicitudin magna, vitae tincidunt risus gravida blandit. Proin ultricies elit sapien, commodo efficitur tortor fermentum at.</h2>
+      </hgroup>
+
+      <div>
+        <div>
+          <ul>
             <li>HOME</li>
-            <li>PAGES</li>
             <li>BLOG</li>
-            <li>PORTFOLIO</li>
-            <li>SHORTCODES</li>
-            <li>FEATURES</li>
-            <li>CONTACT</li>
           </ul>
-        </nav>
-      </header>
-
-      <section class="content"> 
-        <hgroup>
-          <h1>Blog</h1>
-          <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque aliquam, ligula ut lacinia sollicitudin, orci ex mollis ante, eget fringilla tellus nisi non justo. Aenean egestas sollicitudin magna, vitae tincidunt risus gravida blandit. Proin ultricies elit sapien, commodo efficitur tortor fermentum at.</h2>
-        </hgroup>
-
-        <div>
-          <nav>
-            <ul>
-              <li>HOME</li>
-              <li>BLOG</li>
-            </ul>
-          </nav>
-          <div class="social-media-share">
-            <span>share</span>
-            <span class="icon-a"><div class="social-media-share-backing"></div></span>
-            <span class="icon-b"><div class="social-media-share-backing"></div></span>
-            <span class="icon-c"><div class="social-media-share-backing"></div></span>
-            <span class="icon-d"><div class="social-media-share-backing"></div></span>
-          </div>
         </div>
-        
-        <section class="posts">
-          <article> <!-- dynamically repeated articles exampled-->
-            <h1>Article</h1>
-            <p class="copy"></p>
-            <div>
-              <ul class="credits">
-                <li>author</li>
-                <li>date</li>
-                <li>comments</li>
-              </ul>
-              <button>READ MORE</button>
-            </div>
-          </article> <!-- dynamically repeated articles -->
-
-          <nav>
-            <span><button>PREV</button></span>
-            <span><!-- dynamically generated buttons --></span>
-            <span><button>NEXT</button></span>
-          </nav>
-        </section> <!-- posts -->
-
-        <section class="contact">
-          <hgroup>
-            <h1>Serene in their assurance of their empire over matter</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque aliquam, ligula ut lacinia sollicitudin, orci ex mollis ante, eget fringilla tellus nisi non justo. Aenean egestas sollicitudin magna, vitae tincidunt risus gravida blandit. Proin ultricies elit sapien, commodo efficitur tortor fermentum at.</p>
-          </hgroup>
+        <ul class="social-media-share">
+          <li>share</li>
+          <li class="icon-a"><span class="social-media-share-backing"></span></li>
+          <li class="icon-b"><span class="social-media-share-backing"></span></li>
+          <li class="icon-c"><span class="social-media-share-backing"></span></li>
+          <li class="icon-d"><span class="social-media-share-backing"></span></li>
+        </ul>
+      </div>
+      
+      <div class="posts">
+        <article> <!-- dynamically repeated articles exampled-->
+          <h1>Blog post</h1>
+          <p class="copy">Here's where the paragraph content belongs.</p>
           <div>
-            <button>contact</button>
-            <button>learn more</button>
+            <ul class="credits">
+              <li>author</li>
+              <li>date</li>
+              <li>comments</li>
+            </ul>
+            <button>READ MORE</button>
           </div>
-        </section> <!-- contact -->
+        </article> <!-- dynamically repeated articles -->
 
-      </section> <!-- content -->
+      </div> <!-- posts -->
 
-      <footer>
+      <footer class="contact">
+        <hgroup>
+          <h1>Serene in their assurance of their empire over matter</h1>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque aliquam, ligula ut lacinia sollicitudin, orci ex mollis ante, eget fringilla tellus nisi non justo. Aenean egestas sollicitudin magna, vitae tincidunt risus gravida blandit. Proin ultricies elit sapien, commodo efficitur tortor fermentum at.</p>
+        </hgroup>
         <div>
-          <address>address<br>address</address>
-          <span>phone number</span>
-          <span>email</span>
+          <button>contact</button>
+          <button>learn more</button>
         </div>
-        <div class="social-media-contact">
-          <span>icon one</span>
-          <span>icon two</span>
-          <span>icon three</span>
-        </div>
-        <small>
-          <span>copyright</span>
-          <span>TERMS OF USE</span>
-          <span>PRIVACY POLICY</span>
-          <span>CONTACT</span>
-          <span>SUPPORT</span>
-        </small>
-      </footer>
+      </footer> <!-- contact -->
+
+    </article> <!-- content -->
+
+    <footer>
+      <div>
+        <address>address<br>address</address>
+        <span>phone number</span>
+        <span>email</span>
+      </div>
+      <div class="social-media-contact">
+        <span>icon one</span>
+        <span>icon two</span>
+        <span>icon three</span>
+      </div>
+      <small>
+        <span>copyright</span>
+        <span>TERMS OF USE</span>
+        <span>PRIVACY POLICY</span>
+        <span>CONTACT</span>
+        <span>SUPPORT</span>
+      </small>
+    </footer>
 
     <!-- // <script type="text/javascript" src="js/main.js"></script> -->
   </body>

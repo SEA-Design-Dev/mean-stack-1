@@ -1,0 +1,28 @@
+{
+  "name": "mean-stack-1",
+  "version": "0.1.0",
+  "description": "Simple CRUD app to demonstrate the MEAN stack",
+  "main": "Gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mollyfish/mean-stack-1.git"
+  },
+  "author": "Molly Kent <kent.molly@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mollyfish/mean-stack-1/issues"
+  },
+  "homepage": "https://github.com/mollyfish/mean-stack-1#readme",
+  "devDependencies": {
+    "express": "^4.13.3",
+    "gulp": "^3.9.0",
+    "gulp-sass": "^2.0.4"
+  },
+  "dependencies": {
+    "express": "^4.13.3",
+    "mongoose": "^4.1.10"
+  }
+}

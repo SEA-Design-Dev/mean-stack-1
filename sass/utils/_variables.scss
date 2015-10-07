@@ -1,3 +1,55 @@
+// Header:
+// H1 - Ubuntu, Medium, 56pt
+// Nav - Ubuntu, Regular, 24pt
+
+// Content:
+// H1 - Roboto Slab, Regular, 80pt
+// Text - Roboto Slab, Light, 56pt
+
+// Links - Ubuntu, Bold, 24pt
+// Share - Ubuntu, Medium, 24pt
+
+// Blog H1 - Ubuntu, Regular, 72pt
+// Blog text - Ubuntu, Light, 42pt
+// Blog credits - Ubuntu, Light, Italic, 32pt
+// Blog buttons - Ubuntu, Medium, 24pt
+
+// Contact H1 - Ubuntu, Medium, 72pt
+// Contact text - Ubuntu, Regular, 32pt
+// Contact buttons - Ubuntu, Medium, 28pt
+
+// Footer:
+// Info - Ubuntu, Regular, 36pt
+// Social - Ubuntu, Bold, 24pt
+// Copyright - Ubuntu, Regular, 22pt
+
+// ***** Font-Families *****
+$primary-font: "Ubuntu", sans-serif;
+$secondary-font: "Roboto Slab", serif;
+
+// ***** Font-Weights *****
+$font-bold: 700;
+$font-medium: 500;
+$font-regular: 400;
+$font-light: 300;
+
+// ***** Font-Styles *****
+$font-italic: italic;
+
+// ***** Font-Sizes *****
+$font-base: 16px;
+
+$font-tiny: 1.8em;      // 22pt
+$font-smallest: 2em;    // 24pt
+$font-smaller: 2.3em;   // 28pt
+$font-small: 2.55em;    // 32pt
+$font-normal: 3em;      // 36pt
+$font-large: 3.5em;     // 42pt
+$font-larger: 4.67em;   // 56pt
+$font-largest: 6em;     // 72pt
+$font-huge: 6.67em;     // 80pt
+
+// ***** Icons *****
 $icons:
 (google-plus "\e600")
 (facebook "\e601")
@@ -6,11 +58,12 @@ $icons:
 (pinterest "\e604")
 (pinterest2 "\e605");
 
+// ***** Colors *****
 $color-background: #ffffff;            // white
 $color-high-contrast: #1e1d24;         // off black
 $color-low-contrast: #b4b3b5;          // light grey
 $color-highlight: #97f1e7;             // aqua
-$color-highlight-contrast: #5a8785;     // dark grey
+$color-highlight-contrast: #5a8785;    // dark grey
 
 @mixin highlight-font ($color) {
   font-family: Arial, sans;
@@ -26,7 +79,7 @@ $color-highlight-contrast: #5a8785;     // dark grey
   border-radius: 5%/20%;
   color: $text-color;
   background-color: $background-color;
-  transition: color 0.3s, backgound-color 0.3s;
+  transition: color 0.3s, background-color 0.3s;
   &:hover {
     color: $hover-text;
     background-color: $hover-background;

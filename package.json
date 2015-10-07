@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/hollislau/mean-stack-1",
   "dependencies": {
+    "angular": "^1.4.7",
     "gulp": "^3.9.0",
     "gulp-sass": "^2.0.4",
     "webpack-stream": "^2.1.1"

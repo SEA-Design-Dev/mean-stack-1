@@ -38,16 +38,17 @@ $font-italic: italic;
 
 // ***** Font-Sizes *****
 $font-base: 16px;
+$font-size-modifier: 0.4167;
 
-$font-tiny: 1.8em;      // 22pt
-$font-smallest: 2em;    // 24pt
-$font-smaller: 2.3em;   // 28pt
-$font-small: 2.55em;    // 32pt
-$font-normal: 3em;      // 36pt
-$font-large: 3.5em;     // 42pt
-$font-larger: 4.67em;   // 56pt
-$font-largest: 6em;     // 72pt
-$font-huge: 6.67em;     // 80pt
+$font-tiny: 1.8em * $font-size-modifier;      // 22pt
+$font-smallest: 2em * $font-size-modifier;    // 24pt
+$font-smaller: 2.3em * $font-size-modifier;   // 28pt
+$font-small: 2.55em * $font-size-modifier;    // 32pt
+$font-normal: 3em * $font-size-modifier;      // 36pt
+$font-large: 3.5em * $font-size-modifier;     // 42pt
+$font-larger: 4.67em * $font-size-modifier;   // 56pt
+$font-largest: 6em * $font-size-modifier;     // 72pt
+$font-huge: 6.67em * $font-size-modifier;     // 80pt
 
 // ***** Icons *****
 $icons:
@@ -142,7 +143,7 @@ body {
   flex-direction: column;
   margin-bottom: 0;
   padding-bottom: 5%;
-  @media (min-width: 500px) { 
+  @media (min-width: 500px) {
   // ***adjust to appropriate breakpoint width/
     flex-direction: row;
     align-items: center;

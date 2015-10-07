@@ -65,16 +65,21 @@ $color-low-contrast: #b4b3b5;          // light grey
 $color-highlight: #97f1e7;             // aqua
 $color-highlight-contrast: #5a8785;    // dark grey
 
+body {
+  box-sizing: border-box;
+}
+
 @mixin highlight-font ($color) {
+  text-transform: uppercase;
   font-family: Arial, sans;
   font-size: 10px;
+  color: $color;
 }
 
 @mixin button($text-color, $background-color, $hover-text: $background-color, $hover-background: $text-color) {
   @include highlight-font($text-color);
   min-width: 30%;
   padding: 1% 3% 1% 3%;
-  text-transform: uppercase;
   border: 1px solid $color-low-contrast;
   border-radius: 5%/20%;
   color: $text-color;
@@ -89,11 +94,126 @@ $color-highlight-contrast: #5a8785;    // dark grey
   }
 }
 
-
 .posts .button {
   @include button($color-background, $color-high-contrast);
 }
 
 .contact .button {
   @include button($color-low-contrast, $color-highlight, $color-high-contrast, $color-background)
+}
+
+.page-header {
+  background-color: $color-high-contrast;
+  & h1 {
+    color: $color-background;
+    display: inline;
+  }
+  & .site-nav {
+    @include highlight-font($color-background);
+  }
+  & .site-nav a:hover {
+    background-color: $color-high-contrast;
+    color: $color-background;
+  }
+  & .site-nav a:active {
+    color: $color-highlight;
+  }
+}
+
+.site-nav {
+  display: flex;
+  flex-direction: wrap;
+  list-style: none;
+  max-width: 40%;
+  transition: color 0.3s, background-color 0.3s;
+  & a {
+    padding: 0 5% 0 5%;
+  }
+  & span {
+    padding: 0 13% 0 13%;
+  }
+  & a:visited {
+    color: $color-low-contrast;
+  }
+}
+
+.l-page-header {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0;
+  padding-bottom: 5%;
+  @media (min-width: 500px) { 
+  // ***adjust to appropriate breakpoint width/
+    flex-direction: row;
+    align-items: center;
+    & h1 {
+      margin-right: auto;
+      display: inline-block;
+    }
+    & .site-nav {
+      margin-left: auto;
+    }
+  }
+}
+
+.content {
+  & header, & footer {
+    background-color: $color-highlight;
+    color: $color-highlight-contrast;
+  }
+  & .site-nav {
+    @include highlight-font($color-high-contrast);
+  }
+  & .site-nav a:hover{
+    background-color: $color-high-contrast;
+    color: $color-background;
+  }
+}
+
+.content-header-bar {
+  background-color: $color-background;
+  border-bottom: 1px solid $color-low-contrast;
+}
+
+.l-content-header-bar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.l-content {
+  & header h1, & footer {
+    margin: 0;
+    padding: 3%;
+  }
+  & header h2 {
+    padding: 0% 3% 3% 3%;
+  }
+  & .site-nav {
+    margin-right: auto;
+  }
+  & .l-social-media-share {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    padding: 0;
+    margin-left: auto;
+  }
+}
+
+small {
+  @include highlight-font($color-high-contrast);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 0.25% 0 1% 0;
+  padding: 0.25% 20% 0.25% 20%;
+  border-top: 1px solid $color-low-contrast;
+  & a {
+    flex-grow: 0.5;
+  }
+  & p {
+    flex-grow: 0.5;
+    text-transform: capitalize !important;
+  }
 }

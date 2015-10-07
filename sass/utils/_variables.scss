@@ -26,7 +26,7 @@ $color-highlight-contrast: #5a8785;     // dark grey
   border-radius: 5%/20%;
   color: $text-color;
   background-color: $background-color;
-  transition: color 0.3s, background-color 0.3s;
+  transition: color 0.3s, backgound-color 0.3s;
   &:hover {
     color: $hover-text;
     background-color: $hover-background;
@@ -34,4 +34,13 @@ $color-highlight-contrast: #5a8785;     // dark grey
   &:active {
     border: 2px solid $text-color;
   }
+}
+
+
+.posts .button {
+  @include button($color-background, $color-high-contrast);
+}
+
+.contact .button {
+  @include button($color-low-contrast, $color-highlight, $color-high-contrast, $color-background)
 }

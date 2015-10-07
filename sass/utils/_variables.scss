@@ -38,16 +38,17 @@ $font-italic: italic;
 
 // ***** Font-Sizes *****
 $font-base: 16px;
+$font-size-modifier: 0.4167;
 
-$font-tiny: 1.8em;      // 22pt
-$font-smallest: 2em;    // 24pt
-$font-smaller: 2.3em;   // 28pt
-$font-small: 2.55em;    // 32pt
-$font-normal: 3em;      // 36pt
-$font-large: 3.5em;     // 42pt
-$font-larger: 4.67em;   // 56pt
-$font-largest: 6em;     // 72pt
-$font-huge: 6.67em;     // 80pt
+$font-tiny: 1.8em * $font-size-modifier;      // 22pt
+$font-smallest: 2em * $font-size-modifier;    // 24pt
+$font-smaller: 2.3em * $font-size-modifier;   // 28pt
+$font-small: 2.55em * $font-size-modifier;    // 32pt
+$font-normal: 3em * $font-size-modifier;      // 36pt
+$font-large: 3.5em * $font-size-modifier;     // 42pt
+$font-larger: 4.67em * $font-size-modifier;   // 56pt
+$font-largest: 6em * $font-size-modifier;     // 72pt
+$font-huge: 6.67em * $font-size-modifier;     // 80pt
 
 // ***** Icons *****
 $icons:
@@ -65,19 +66,19 @@ $color-low-contrast: #b4b3b5;          // light grey
 $color-highlight: #97f1e7;             // aqua
 $color-highlight-contrast: #5a8785;    // dark grey
 
-body {
-  box-sizing: border-box;
-}
-
-@mixin highlight-font ($color) {
-  text-transform: uppercase;
-  font-family: Arial, sans;
-  font-size: 10px;
+@mixin highlight-font ($color, $font-size: $font-smallest, $font: "auto", $upper: "auto") {
+  font-size: $font-size;
   color: $color;
+  @if $font != "auto" {
+    font-family: $font;
+  }
+  @if $upper != "auto" {
+  text-transform: uppercase;
+  }
 }
 
-@mixin button($text-color, $background-color, $hover-text: $background-color, $hover-background: $text-color) {
-  @include highlight-font($text-color);
+@mixin button($text-color, $background-color, $font-size, $hover-text: $background-color, $hover-background: $text-color) {
+  @include highlight-font($text-color, $font-size, auto, uppercase);
   min-width: 30%;
   padding: 1% 3% 1% 3%;
   border: 1px solid $color-low-contrast;
@@ -95,21 +96,22 @@ body {
 }
 
 .posts .button {
-  @include button($color-background, $color-high-contrast);
+  @include button($color-background, $color-high-contrast, $font-smallest);
 }
 
 .contact .button {
-  @include button($color-low-contrast, $color-highlight, $color-high-contrast, $color-background)
+  @include button($color-low-contrast, $color-highlight, $font-smaller, $color-high-contrast, $color-background)
 }
 
 .page-header {
   background-color: $color-high-contrast;
   & h1 {
     color: $color-background;
-    display: inline;
+    font-size: $font-larger;
   }
   & .site-nav {
-    @include highlight-font($color-background);
+    @include highlight-font($color-background, $font-smallest, auto, uppercase);
+    font-weight: $font-regular;
   }
   & .site-nav a:hover {
     background-color: $color-high-contrast;
@@ -122,9 +124,8 @@ body {
 
 .site-nav {
   display: flex;
-  flex-direction: wrap;
+  flex-direction: row;
   list-style: none;
-  max-width: 40%;
   transition: color 0.3s, background-color 0.3s;
   & a {
     padding: 0 5% 0 5%;
@@ -140,18 +141,20 @@ body {
 .l-page-header {
   display: flex;
   flex-direction: column;
-  margin-bottom: 0;
+  margin: 0;
+  padding-top: 5%;
   padding-bottom: 5%;
   @media (min-width: 500px) { 
   // ***adjust to appropriate breakpoint width/
     flex-direction: row;
     align-items: center;
     & h1 {
+      padding-left: 10%;
       margin-right: auto;
-      display: inline-block;
     }
     & .site-nav {
-      margin-left: auto;
+      margin: auto;
+      padding-right: 10%;
     }
   }
 }
@@ -159,10 +162,22 @@ body {
 .content {
   & header, & footer {
     background-color: $color-highlight;
-    color: $color-highlight-contrast;
+  }
+  & header {
+      font-family: $secondary-font;
+    & h1 {
+      color: $color-high-contrast;
+      font-size: $font-huge;
+      font-weight: $font-regular;
+    } 
+    & h2 {
+      color: $color-highlight-contrast;
+      font-size: $font-larger;
+      font-weight: $font-light;
+    }
   }
   & .site-nav {
-    @include highlight-font($color-high-contrast);
+    @include highlight-font($color-high-contrast, $font-smallest, auto, uppercase);
   }
   & .site-nav a:hover{
     background-color: $color-high-contrast;
@@ -184,10 +199,10 @@ body {
 .l-content {
   & header h1, & footer {
     margin: 0;
-    padding: 3%;
+    padding: 5% 5% 2% 10%;
   }
   & header h2 {
-    padding: 0% 3% 3% 3%;
+    padding: 0% 35% 10% 10%;
   }
   & .site-nav {
     margin-right: auto;

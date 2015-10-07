@@ -209,7 +209,11 @@ small {
   margin: 0.25% 0 1% 0;
   padding: 0.25% 20% 0.25% 20%;
   border-top: 1px solid $color-low-contrast;
-  & span {
+  & a {
     flex-grow: 0.5;
+  }
+  & p {
+    flex-grow: 0.5;
+    text-transform: capitalize !important;
   }
 }

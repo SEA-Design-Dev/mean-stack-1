@@ -3,12 +3,12 @@ var sass = require("gulp-sass");
 var webpack = require("webpack-stream");
 
 gulp.task("sass", function() {
-  gulp.src("sass/**/*.scss")
+  return gulp.src("sass/**/*.scss")
   .pipe(sass().on("error", sass.logError))
   .pipe(gulp.dest("public/css/"));
 });
 
-gulp.task('webpack', function(callback) {
+gulp.task('webpack', function() {
   return gulp.src("js/**/*.js")
   .pipe(webpack({
     output: {

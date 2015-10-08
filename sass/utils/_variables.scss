@@ -189,8 +189,8 @@ $color-highlight-contrast: #5a8785;    // dark grey
   }
 }
 
-.social-media-share & span {
-      display: none;
+.social-share span, .pinterest-container span {
+  display: none;
 }
 
 .content-header-bar {
@@ -229,7 +229,6 @@ $color-highlight-contrast: #5a8785;    // dark grey
 }
 
 .posts {
-  padding-top: 7%;
   padding-left: 20%;
   padding-right: 20%;
   & h1 {
@@ -237,6 +236,9 @@ $color-highlight-contrast: #5a8785;    // dark grey
   }
   & .copy {
     @include set-font ($color-low-contrast, $font-large, $font-light);
+  }
+  & article {
+    padding-top: 7%;
   }
 }
 
@@ -263,16 +265,6 @@ $color-highlight-contrast: #5a8785;    // dark grey
   padding-bottom: 5%;
   border-bottom: 1px solid $color-low-contrast;
 }
-// .anchor {
-//   position: relative;
-//   width: 25%;
-//   height: 100%;
-//   margin-right: auto;
-//   & .button {
-//     position: absolute;
-//   }
-// }
-
 
 .credits {
   @include set-font ($color-low-contrast, $font-small, $font-light);
@@ -288,6 +280,40 @@ $color-highlight-contrast: #5a8785;    // dark grey
   }
 }
 
+.contact {
+  border-top: 1px solid $color-low-contrast;
+  & h3 {
+    @include set-font ($color-background, $font-largest, $font-medium);
+  }
+  & p {
+    @include set-font ($color-background, $font-small);
+  }
+  & header {
+    padding-bottom: 5%;
+  }
+}
+
+.links {
+  width: 100%;
+}
+
+.footer-main {
+  top: 20%;
+  display: flex;
+  flex-direction: row;
+  margin-left: 20%;
+  margin-right: 20%;
+}
+
+.contact-info {
+  @include set-font ($color-high-contrast, $font-normal)
+  display: flex;
+  flex-direction: row;
+}
+
+.social-media-contact {
+  margin-right: 0;
+}
 
 small {
   @include set-font ($color-high-contrast, $font-tiny);

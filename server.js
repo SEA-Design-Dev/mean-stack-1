@@ -16,9 +16,11 @@ var mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost/blogs');
 // Grab the blog post model
 var Blog = require('./app/models/blog-post');
-// Environment defined port, OR 8000
-var port = process.env.PORT || 8000;
+
 // Use built in middleware; pass the directory; use absolute path to directory to serve
+
+var router = express.Router();
+
 app.use(express.static(__dirname + '/public'));
 
 
@@ -107,6 +109,4 @@ router.route('/blog-post/:blog_id')
     });
   });
 
-// START THE SERVER
-app.listen(port);
-console.log("Fancy stuff on port " + port);
+app.use('/api', router);

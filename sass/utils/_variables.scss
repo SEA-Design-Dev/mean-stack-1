@@ -306,7 +306,7 @@ $color-highlight-contrast: #5a8785;    // dark grey
 }
 
 .contact-info {
-  @include set-font ($color-high-contrast, $font-normal)
+  @include set-font ($color-high-contrast, $font-normal);
   display: flex;
   flex-direction: row;
 }

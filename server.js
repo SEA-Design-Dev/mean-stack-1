@@ -16,17 +16,19 @@ router.get("/", function (req, res) {
   res.sendFile(__dirname + "/public/index.html");
 });
 
-router.get("/public/*", function (req, res) {
-  var path = req.path;
-  console.log("path", path);
-  if (path.match(/node_modules/)) {
-    res.sendFile(__dirname + path);
-  } else {
-    res.sendFile(__dirname + path);
-  }
-});
-
+app.use(express.static(__dirname + "/public"));
 app.use("/", router);
+
+// router.get("/public/*", function (req, res) {
+//   var path = req.path;
+//   console.log("path", path);
+//   if (path.match(/node_modules/)) {
+//     res.sendFile(__dirname + path);
+//   } else {
+//     res.sendFile(__dirname + path);
+//   }
+// });
+
 
 // CREATE
 
@@ -115,7 +117,6 @@ app.listen(app.get("port"), function() {
   console.log("Express server is running on port", app.get("port"));
 });
 
-// app.use(express.static(__dirname + "/public"));
 
 // app.route("/").get(function(req, res) {
 //   res.sendFile("index.html", {root: __dirname + "/public"});

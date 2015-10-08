@@ -1,0 +1,11 @@
+.blog {
+  margin-bottom: 6em;
+}
+.blog div {
+	display:flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-content: flex-start;
+    align-items: center;
+}

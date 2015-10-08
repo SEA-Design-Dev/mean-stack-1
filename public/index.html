@@ -8,7 +8,7 @@
     <link href='https://fonts.googleapis.com/css?family=Ubuntu:400,300,300italic,500,700|Roboto+Slab:400,300' rel='stylesheet' type='text/css'>
     <link rel='stylesheet' href='css/main.css' type='text/css'>
   </head>
-  <body>
+  <body ng-app="intellyBlog">
     <header class="page-header l-page-header">
       <h1>intelly</h1>
       <nav>
@@ -46,28 +46,15 @@
         </div>
       </header>
 
-      <div class="posts l-posts">
-        <article> <!-- dynamically repeated articles exampled-->
-          <h1>Blog post</h1>
-          <p class="copy">Here's where the groovy paragraph content belongs. Here's where the amazing paragraph content belongs. Here's where the repetitive paragraph content belongs. Here's where the unseemly paragraph content belongs. Here's where the ostentatious paragraph content belongs. Here's where the benificent paragraph content belongs.</p>
+      <div class="posts l-posts" ng-controller="controller">
+        <article class="blogs" ng-repeat="post in posts"> <!-- dynamically repeated articles exampled-->
+          <h1>{{ post.title }}</h1>
+          <p class="copy">{{ post.content }}</p>
           <div class="blog-post-footer">
             <ul class="credits l-credits">
-              <li>author</li><span>•</span>
-              <li>March 1, 1971</li><span>•</span>
-              <li>48 comments</li>
-            </ul>
-            <a class="button">Read More</a>
-          </div>
-        </article> <!-- dynamically repeated articles -->
-
-                <article> <!-- dynamically repeated articles exampled-->
-          <h1>Blog post</h1>
-          <p class="copy">Here's where the groovy paragraph content belongs. Here's where the amazing paragraph content belongs. Here's where the repetitive paragraph content belongs. Here's where the unseemly paragraph content belongs. Here's where the ostentatious paragraph content belongs. Here's where the benificent paragraph content belongs.</p>
-          <div class="blog-post-footer">
-            <ul class="credits l-credits">
-              <li>author</li><span>•</span>
-              <li>March 1, 1971</li><span>•</span>
-              <li>48 comments</li>
+              <li>{{ post.author }}</li><span>•</span>
+              <li>{{ post.date | date }}</li><span>•</span>
+              <li>{{ post.comments }}</li>
             </ul>
             <a class="button">Read More</a>
           </div>
@@ -119,7 +106,9 @@
         <a>Support</a>
       </small>
     </footer>
-    <!-- // <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.5/angular.min.js"></script> -->
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.5/angular.min.js"></script>
+    <script src="js/blog.js"></script>
+    <script src="js/controller.js"></script>
     <!-- // <script type="text/javascript" src="js/main.js"></script> -->
   </body>
 </html>

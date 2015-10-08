@@ -38,7 +38,7 @@ $font-italic: italic;
 
 // ***** Font-Sizes *****
 $font-base: 16px;
-$font-size-modifier: 0.4167;
+$font-size-modifier: 0.3167;
 
 $font-tiny: 1.8em * $font-size-modifier;      // 22pt
 $font-smallest: 2em * $font-size-modifier;    // 24pt
@@ -66,9 +66,10 @@ $color-low-contrast: #b4b3b5;          // light grey
 $color-highlight: #97f1e7;             // aqua
 $color-highlight-contrast: #5a8785;    // dark grey
 
-@mixin highlight-font ($color, $font-size: $font-smallest, $font: "auto", $upper: "auto") {
+@mixin set-font ($color, $font-size: $font-smallest, $weight: $font-regular, $font: "auto", $upper: "auto") {
   font-size: $font-size;
   color: $color;
+  font-weight: $weight;
   @if $font != "auto" {
     font-family: $font;
   }
@@ -78,7 +79,7 @@ $color-highlight-contrast: #5a8785;    // dark grey
 }
 
 @mixin button($text-color, $background-color, $font-size, $hover-text: $background-color, $hover-background: $text-color) {
-  @include highlight-font($text-color, $font-size, auto, uppercase);
+  @include set-font ($text-color, $font-size, $font-medium, auto, uppercase);
   min-width: 30%;
   padding: 1% 3% 1% 3%;
   border: 1px solid $color-low-contrast;
@@ -103,30 +104,11 @@ $color-highlight-contrast: #5a8785;    // dark grey
   @include button($color-low-contrast, $color-highlight, $font-smaller, $color-high-contrast, $color-background)
 }
 
-.page-header {
-  background-color: $color-high-contrast;
-  & h1 {
-    color: $color-background;
-    font-size: $font-larger;
-  }
-  & .site-nav {
-    @include highlight-font($color-background, $font-smallest, auto, uppercase);
-    font-weight: $font-regular;
-  }
-  & .site-nav a:hover {
-    background-color: $color-high-contrast;
-    color: $color-background;
-  }
-  & .site-nav a:active {
-    color: $color-highlight;
-  }
-}
-
 .site-nav {
   display: flex;
   flex-direction: row;
   list-style: none;
-  transition: color 0.3s, background-color 0.3s;
+  transition: color 0.5s, background-color 0.5s;
   & a {
     padding: 0 5% 0 5%;
   }
@@ -135,6 +117,25 @@ $color-highlight-contrast: #5a8785;    // dark grey
   }
   & a:visited {
     color: $color-low-contrast;
+  }
+}
+
+.page-header {
+  background-color: $color-high-contrast;
+  & h1 {
+    color: $color-background;
+    font-size: $font-larger;
+  }
+  & .site-nav {
+    @include set-font ($color-background, $font-smallest, $font-regular, auto, uppercase);
+    font-weight: $font-regular;
+  }
+  & .site-nav a:hover {
+    background-color: $color-background;
+    color: $color-high-contrast;
+  }
+  & .site-nav a:active {
+    color: $color-highlight;
   }
 }
 
@@ -164,36 +165,43 @@ $color-highlight-contrast: #5a8785;    // dark grey
     background-color: $color-highlight;
   }
   & header {
-      font-family: $secondary-font;
     & h1 {
+      font-family: $secondary-font;
       color: $color-high-contrast;
       font-size: $font-huge;
       font-weight: $font-regular;
     } 
     & h2 {
+      font-family: $secondary-font;
       color: $color-highlight-contrast;
       font-size: $font-larger;
       font-weight: $font-light;
     }
   }
-  & .site-nav {
-    @include highlight-font($color-high-contrast, $font-smallest, auto, uppercase);
+  & .site-nav a {
+    @include set-font ($color-high-contrast, $font-smallest, $font-bold, auto, uppercase);
   }
   & .site-nav a:hover{
     background-color: $color-high-contrast;
     color: $color-background;
   }
 }
-
+.social-media-share & span {
+      display: none;
+    }
 .content-header-bar {
   background-color: $color-background;
   border-bottom: 1px solid $color-low-contrast;
+  border-top: 1px solid $color-low-contrast;
 }
 
 .l-content-header-bar {
   display: flex;
   flex-direction: row;
   align-items: center;
+  padding-left: 10%;
+  padding-top: 2%;
+  padding-bottom: 2%;
 }
 
 .l-content {
@@ -205,30 +213,54 @@ $color-highlight-contrast: #5a8785;    // dark grey
     padding: 0% 35% 10% 10%;
   }
   & .site-nav {
-    margin-right: auto;
+    padding-left: 10%;
   }
   & .l-social-media-share {
     display: flex;
     flex-direction: row;
     list-style: none;
-    padding: 0;
+    padding-right: 10%;
     margin-left: auto;
   }
 }
 
+.posts {
+  padding-top: 7%;
+  padding-left: 20%;
+  padding-right: 20%;
+  & h1 {
+    @include set-font ($color-high-contrast, $font-largest, $font-medium);
+  }
+  & .copy {
+    @include set-font ($color-low-contrast, $font-large, $font-light);
+  }
+}
+
+.l-posts {
+  margin: auto;
+  & h1 {
+    margin-bottom: 1.5%;
+  }
+  & .copy {
+
+  }
+}
+
 small {
-  @include highlight-font($color-high-contrast);
+  @include set-font ($color-high-contrast, $font-tiny);
   display: flex;
   flex-direction: row;
   justify-content: center;
-  margin: 0.25% 0 1% 0;
-  padding: 0.25% 20% 0.25% 20%;
+  padding-top: 0.25%; 
+  padding-right: 35%; 
+  padding-bottom: 0.25%; 
+  padding-left:   35%;
   border-top: 1px solid $color-low-contrast;
   & a {
-    flex-grow: 0.5;
+    flex-grow: 0.01;
   }
   & p {
-    flex-grow: 0.5;
-    text-transform: capitalize !important;
+    flex-grow: 0.01;
+    text-transform: capitalize;
   }
 }

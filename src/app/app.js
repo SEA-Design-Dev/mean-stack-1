@@ -1,3 +1,7 @@
+require('angular');
+require('angular-route');
+require('./posts');
+
 (function () {
   "use strict";
 
@@ -25,3 +29,5 @@
     });
   }]);
 }());
+
+

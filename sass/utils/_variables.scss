@@ -38,7 +38,9 @@ $font-italic: italic;
 
 // ***** Font-Sizes *****
 $font-base: 16px;
-$font-size-modifier: 0.3167;
+
+$font-size-modifier: 0.4167;
+
 
 $font-tiny: 1.8em * $font-size-modifier;      // 22pt
 $font-smallest: 2em * $font-size-modifier;    // 24pt
@@ -145,7 +147,7 @@ $color-highlight-contrast: #5a8785;    // dark grey
   margin: 0;
   padding-top: 5%;
   padding-bottom: 5%;
-  @media (min-width: 500px) { 
+  @media (min-width: 500px) {
   // ***adjust to appropriate breakpoint width/
     flex-direction: row;
     align-items: center;

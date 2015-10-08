@@ -1,0 +1,3 @@
+.contact .button {
+  @include button($color-low-contrast, $color-highlight, $font-smaller, $color-high-contrast, $color-background)
+}

@@ -1,0 +1,18 @@
+.page-header {
+  background-color: $color-high-contrast;
+  & h1 {
+    color: $color-background;
+    font-size: $font-larger;
+  }
+  & .site-nav {
+    @include set-font ($color-background, $font-smallest, $font-regular, auto, uppercase);
+    font-weight: $font-regular;
+  }
+  & .site-nav a:hover {
+    background-color: $color-background;
+    color: $color-high-contrast;
+  }
+  & .site-nav a:active {
+    color: $color-highlight;
+  }
+}

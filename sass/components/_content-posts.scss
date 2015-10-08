@@ -1,0 +1,3 @@
+.posts .button {
+  @include button($color-background, $color-high-contrast, $font-smallest);
+}

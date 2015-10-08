@@ -186,9 +186,11 @@ $color-highlight-contrast: #5a8785;    // dark grey
     color: $color-background;
   }
 }
+
 .social-media-share & span {
       display: none;
-    }
+}
+
 .content-header-bar {
   background-color: $color-background;
   border-bottom: 1px solid $color-low-contrast;
@@ -242,9 +244,48 @@ $color-highlight-contrast: #5a8785;    // dark grey
     margin-bottom: 1.5%;
   }
   & .copy {
-
+    margin-bottom: 1.5%;
+  }
+  .l-credits {
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
   }
 }
+
+.blog-post-footer {
+  display: flex;
+  flex-direction: row;
+  height: 5em;
+  width: 100%;
+  padding-bottom: 5%;
+  border-bottom: 1px solid $color-low-contrast;
+}
+// .anchor {
+//   position: relative;
+//   width: 25%;
+//   height: 100%;
+//   margin-right: auto;
+//   & .button {
+//     position: absolute;
+//   }
+// }
+
+
+.credits {
+  @include set-font ($color-low-contrast, $font-small, $font-light);
+  font-style: italic;
+}
+
+.l-credits {
+  & li {
+    padding-right: 2%;
+  }
+  & span {
+    padding-right: 2%;
+  }
+}
+
 
 small {
   @include set-font ($color-high-contrast, $font-tiny);

@@ -1,3 +1,5 @@
+require('../app');
+
 angular.module("blog").controller("PostCtrl", ["PostsService", "$routeParams", function (PostsService, $routeParams) {
   var vm = this;
 

@@ -47,6 +47,20 @@
       </header>
 
       <div class="posts l-posts" ng-controller="controller">
+
+        <form class="blogs">
+          <input ng-model="blog.title" type="text" id="title" placeholder="title"/>
+          <textarea ng-model="blog.content" class="copy" id="content" placeholder="content"></textarea>
+          <div class="blog-post-footer">
+            <ul class="credits l-credits">
+              <li><input ng-model="blog.author" type="text" id="author" placeholder="author"/></li><span>•</span>
+              <li><input ng-model="blog.date" type="date" id="date" /></li><span>•</span>
+              <li><input ng-model="blog.comments" type="comments" id="comments" /></li>
+            </ul>
+            <a class="button" id="submit" ng-submit="submit">Enter</a>
+          </div>
+        </form>
+
         <article class="blogs" ng-repeat="post in posts"> <!-- dynamically repeated articles exampled-->
           <h1>{{ post.title }}</h1>
           <p class="copy">{{ post.content }}</p>

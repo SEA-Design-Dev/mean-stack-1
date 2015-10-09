@@ -28,6 +28,7 @@ The user should be able to create, read, update, and delete blog posts from the 
 1. All CSS measurements should use elastic units unless a pixel specific unit is required for both mobile and desktop
 1. JavaScript code is expected to be written cleanly and maintainably using the best practices covered during lectures
 1. After checking out the repository, I must be able to run `npm install` and `gulp serve` in order to access the application locally
+  1. `gulp serve` does _not_ need to start the mongo database; you can assume that an instance of mongo is already running.
 1. Write up a description for every plugin used (no limit, but you must justify them)
   1. jQuery is not allowed. Angular's built-in DOM manipulation can manage most of what you'd need jQuery for.
 

@@ -1,3 +1,5 @@
+require('../app');
+
 (function () {
   "use strict";
   angular.module("blog").controller("PostFormCtrl", ["PostsService", "$routeParams", "$location", function (PostsService, $routeParams, $location) {

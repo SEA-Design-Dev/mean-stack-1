@@ -35,7 +35,6 @@ app.use("/", router);
 var blogsRoute = router.route("/api/blogs");
 
 blogsRoute.post(function (req, res) {
-  console.log(req.body);
   var blog = new Blog();
 
   blog.title = req.body.title;

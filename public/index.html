@@ -47,7 +47,7 @@
       </header>
 
       <div class="posts l-posts" ng-controller="controller">
-        <article class="blogs" ng-repeat="post in posts"> <!-- dynamically repeated articles exampled-->
+        <article class="blogs" ng-repeat="post in posts">
           <h1>{{ post.title }}</h1>
           <p class="copy">{{ post.content }}</p>
           <div class="blog-post-footer">
@@ -58,9 +58,23 @@
             </ul>
             <a class="button">Read More</a>
           </div>
-        </article> <!-- dynamically repeated articles -->
+        </article>
+      </div>
 
-      </div> <!-- posts -->
+<!--       <div class="posts l-posts" ng-controller="controller">
+        <article class="blogs" ng-repeat="post in posts">
+          <h1>{{ post.title }}</h1>
+          <p class="copy">{{ post.content }}</p>
+          <div class="blog-post-footer">
+            <ul class="credits l-credits">
+              <li>{{ post.author }}</li><span>•</span>
+              <li>{{ post.date | date }}</li><span>•</span>
+              <li>{{ post.comments }}</li>
+            </ul>
+            <a class="button">Read More</a>
+          </div>
+        </article>
+      </div> -->
 
       <footer class="contact">
         <header>

@@ -1,7 +1,7 @@
 .posts {
   padding-left: 20%;
   padding-right: 20%;
-  & h1 {
+  & .title {
     @include set-font ($color-high-contrast, $font-largest, $font-medium);
   }
   & .copy {
@@ -12,5 +12,14 @@
   }
   & .button {
     @include button($color-background, $color-high-contrast, $font-smallest);
+  }
+  & input, & textarea {
+    border: 0;
+  }
+  & textarea, & .title {
+    width: 100%;
+  }
+  & textarea {
+    height: 5em;
   }
 }

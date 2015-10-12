@@ -22,7 +22,7 @@ coverage
 # Compiled files
 public/js/main.js
 public/css/main.css
-
+public/views
 
 # Dependency directory
 # https://www.npmjs.org/doc/misc/npm-faq.html#should-i-check-my-node_modules-folder-into-git

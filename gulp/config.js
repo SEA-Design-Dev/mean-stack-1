@@ -7,10 +7,6 @@ module.exports = {
     src: src + "/app/**/*.js",
     dest: dest + "/js/"
   },
-  // assets: {
-  //   src: src + "/assets/**/*",
-  //   dest: dest + "/assets/""
-  // },
   sass: {
     src: src + "/sass/**/*.scss",
     dest: dest + "/css/"

@@ -10,7 +10,6 @@ require("angular-route");
   app.config(["$routeProvider", function ($routeProvider) {
     $routeProvider.when("/blogs", {
       templateUrl: "views/blogs/blogs_list.html",
-      // controller: "controller as vm",
       controller: "BlogsCtrl as vm",
     })
     .when("/blogs/new", {

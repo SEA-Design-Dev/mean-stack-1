@@ -8,11 +8,8 @@ require("../app.js");
     var vm = this;
 
     vm.blogs = [];
-    vm.delete = deleteBlog;
 
     initialize();
-
-    /////
 
     function initialize () {
       getBlogs();
@@ -21,12 +18,6 @@ require("../app.js");
     function getBlogs () {
       BlogsService.get().then(function (resp) {
         vm.blogs = resp.data;
-      });
-    }
-
-    function deleteBlog (blog) {
-      BlogsService.delete(blog).then(function () {
-        getBlogs();
       });
     }
   }]);

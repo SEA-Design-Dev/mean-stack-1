@@ -19,17 +19,6 @@ router.get("/", function (req, res) {
 app.use(express.static(__dirname + "/public"));
 app.use("/", router);
 
-// router.get("/public/*", function (req, res) {
-//   var path = req.path;
-//   console.log("path", path);
-//   if (path.match(/node_modules/)) {
-//     res.sendFile(__dirname + path);
-//   } else {
-//     res.sendFile(__dirname + path);
-//   }
-// });
-
-
 // CREATE
 
 var blogsRoute = router.route("/api/blogs");
@@ -115,8 +104,3 @@ blogRoute.delete(function (req, res) {
 app.listen(app.get("port"), function() {
   console.log("Express server is running on port", app.get("port"));
 });
-
-
-// app.route("/").get(function(req, res) {
-//   res.sendFile("index.html", {root: __dirname + "/public"});
-// });

@@ -5,11 +5,9 @@
 }
 
 .footer-main {
-  top: 20%;
   display: flex;
   flex-direction: row;
-  margin-left: 7%;
-  margin-right: 7%;
+  margin: 2% 7% 2% 7%;
   justify-content: space-between;
 }
 
@@ -39,11 +37,19 @@
   @include set-font ($color-high-contrast, $font-normal);
   display: flex;
   flex-direction: row;
+  min-width: 58%;
+  align-items: flex-end;
+  & div {
+    margin: 0 3% 0 3%;
+  }
+  & address {
+    min-width: 30%;
+    font-style: normal;
+  }
 }
 
 .social-media-contact {
-  width: 60%;
-  margin-left: auto;
+  width: 38%;
 }
 
 small {

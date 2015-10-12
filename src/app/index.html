@@ -33,7 +33,7 @@
           <div>
             <ul class="site-nav">
               <li><a href="#/blogs">Home</a><span>•</span></li>
-              <li><a>Blog</a></li>
+              <li><a href="#/blogs/new">Blog</a></li>
             </ul>
           </div>
           <ul class="l-social-media-share">
@@ -46,47 +46,7 @@
         </div>
       </header>
 
-<<<<<<< HEAD:src/app/index.html
       <div ng-view></div>
-
-<!--       <div class="posts l-posts" ng-controller="controller">
-        <article class="blogs" ng-repeat="post in posts">
-=======
-      <div id="blog-posts" class="posts l-posts" ng-controller="BlogController as blogPosts">
-
-        <form novalidate name="intellyBlog" class="blogs" ng-submit="intellyBlog.$valid && blogPosts.input.add()">
-          <input ng-model="blogPosts.input.title" type="text" id="title" placeholder="title" required/>
-          <textarea ng-model="blogPosts.input.content" class="copy" id="content" placeholder="content" required></textarea>
-          <div class="blog-post-footer">
-            <ul class="credits l-credits">
-              <li><input ng-model="blogPosts.input.author" type="text" id="author" placeholder="author" required/></li><span>•</span>
-              <li><input ng-model="blogPosts.input.date" type="date" id="date" required/></li><span>•</span>
-              <li><input ng-model="blogPosts.input.comments" type="comments" id="comments" placeholder="comments"/></li>
-            </ul>
-            <input type="submit" class="button" id="submit"></a>
-          </div>
-        </form>
-
-        <article class="blogs" ng-repeat="post in blog.posts"> 
->>>>>>> angular:public/index.html
-          <h1>{{ post.title }}</h1>
-          <p class="copy">{{ post.content }}</p>
-          <div class="blog-post-footer">
-            <ul class="credits l-credits">
-              <li>{{ post.author }}</li><span>•</span>
-              <li>{{ post.date | date }}</li><span>•</span>
-              <li>{{ post.comments }}</li>
-            </ul>
-            <a class="button">Read More</a>
-          </div>
-<<<<<<< HEAD:src/app/index.html
-        </article>
-      </div> -->
-=======
-        </article> 
-
-      </div> <!-- posts -->
->>>>>>> angular:public/index.html
 
       <footer class="contact">
         <header>
@@ -105,11 +65,11 @@
       <div class="footer-main">
         <div class="contact-info">
           <div class="column">
-            <address>address<br>address</address>
+            <address>2319 Hilltop Haven Drive<br>Upper Greenwood Lake, NJ 07421</address>
           </div>
           <div class="column">
-            <a>phone number</a><br>
-            <a>email</a>
+            <a>662-407-6792</a><br>
+            <a>contact@intelly.com</a>
           </div>
         </div>
         <div class="social-media-contact">
@@ -132,9 +92,6 @@
         <a>Support</a>
       </small>
     </footer>
-    <!-- // <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.5/angular.min.js"></script> -->
-    <!-- // <script src="js/blog.js"></script> -->
-    <!-- // <script src="js/controller.js"></script> -->
     <script type="text/javascript" src="/js/main.js"></script>
   </body>
 </html>

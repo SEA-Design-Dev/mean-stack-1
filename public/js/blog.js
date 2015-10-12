@@ -1,3 +1,5 @@
+// require("angular");
+
 var blog = angular.module("intellyBlog", []);
 
 var posts = [

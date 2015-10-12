@@ -5,7 +5,6 @@ module.exports = {
   javascript: {
     entryPoint: src + "/app/entry.js",
     src: src + "/app/**/*.js",
-    // src: src + "/app/**/*.js",
     dest: dest + "/js/"
   },
   // assets: {
@@ -14,13 +13,12 @@ module.exports = {
   // },
   sass: {
     src: src + "/sass/**/*.{sass,scss}",
-    // src: src + "/sass/**/*.scss",
     dest: dest + "/css/"
   },
-  // html: {
-  //   src: src + "/app/**/*.html",
-  //   dest: dest + "/views/",
-  // },
+  html: {
+    src: src + "/app/**/*.html",
+    dest: dest + "/views/",
+  },
   // server: {
   //   src: dest,
   //   livereload: true,

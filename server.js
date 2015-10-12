@@ -13,7 +13,7 @@ app.set("port", (process.env.PORT || 5000));
 app.use(bodyParser.json());
 
 router.get("/", function (req, res) {
-  res.sendFile(__dirname + "/public/index.html");
+  res.sendFile(__dirname + "/public/views/index.html");
 });
 
 app.use(express.static(__dirname + "/public"));

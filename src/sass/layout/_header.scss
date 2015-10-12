@@ -6,7 +6,6 @@
   }
   & .site-nav {
     @include set-font ($color-background, $font-smallest, $font-regular, auto, uppercase);
-    font-weight: $font-regular;
   }
   & .site-nav a:hover {
     background-color: $color-background;

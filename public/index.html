@@ -46,22 +46,22 @@
         </div>
       </header>
 
-      <div class="posts l-posts" ng-controller="controller">
+      <div id="blog-posts" class="posts l-posts" ng-controller="BlogController as blogPosts">
 
-        <form class="blogs">
-          <input ng-model="blog.title" type="text" id="title" placeholder="title"/>
-          <textarea ng-model="blog.content" class="copy" id="content" placeholder="content"></textarea>
+        <form novalidate name="intellyBlog" class="blogs" ng-submit="intellyBlog.$valid && blogPosts.input.add()">
+          <input ng-model="blogPosts.input.title" type="text" id="title" placeholder="title" required/>
+          <textarea ng-model="blogPosts.input.content" class="copy" id="content" placeholder="content" required></textarea>
           <div class="blog-post-footer">
             <ul class="credits l-credits">
-              <li><input ng-model="blog.author" type="text" id="author" placeholder="author"/></li><span>•</span>
-              <li><input ng-model="blog.date" type="date" id="date" /></li><span>•</span>
-              <li><input ng-model="blog.comments" type="comments" id="comments" /></li>
+              <li><input ng-model="blogPosts.input.author" type="text" id="author" placeholder="author" required/></li><span>•</span>
+              <li><input ng-model="blogPosts.input.date" type="date" id="date" required/></li><span>•</span>
+              <li><input ng-model="blogPosts.input.comments" type="comments" id="comments" placeholder="comments"/></li>
             </ul>
-            <a class="button" id="submit" ng-submit="submit">Enter</a>
+            <input type="submit" class="button" id="submit"></a>
           </div>
         </form>
 
-        <article class="blogs" ng-repeat="post in posts"> <!-- dynamically repeated articles exampled-->
+        <article class="blogs" ng-repeat="post in blog.posts"> 
           <h1>{{ post.title }}</h1>
           <p class="copy">{{ post.content }}</p>
           <div class="blog-post-footer">
@@ -72,7 +72,7 @@
             </ul>
             <a class="button">Read More</a>
           </div>
-        </article> <!-- dynamically repeated articles -->
+        </article> 
 
       </div> <!-- posts -->
 

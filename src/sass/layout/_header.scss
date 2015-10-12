@@ -1,0 +1,72 @@
+.page-header {
+  background-color: $color-high-contrast;
+  & h1 {
+    color: $color-background;
+    font-size: $font-larger;
+  }
+  & .site-nav {
+    @include set-font ($color-background, $font-smallest, $font-regular, auto, uppercase);
+  }
+  & .site-nav a:hover {
+    background-color: $color-background;
+    color: $color-high-contrast;
+  }
+  & .site-nav a:active {
+    color: $color-highlight;
+  }
+}
+
+.content-header-bar {
+  background-color: $color-background;
+  border-bottom: 1px solid $color-low-contrast;
+  border-top: 1px solid $color-low-contrast;
+}
+
+.l-content-header-bar {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-left: 10%;
+  padding-top: 2%;
+  padding-bottom: 2%;
+}
+
+.l-page-header {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 0;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  & h1 {
+    padding-left: 10%;
+    margin-right: auto;
+  }
+  & .site-nav {
+    margin: auto;
+    padding-right: 10%;
+  }
+}

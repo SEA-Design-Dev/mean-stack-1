@@ -1,3 +1,5 @@
 .contact .button {
-  @include button($color-low-contrast, $color-highlight, $font-smaller, $color-high-contrast, $color-background)
+  @include button($color-low-contrast, $color-highlight, $font-smaller, $color-high-contrast, $color-background);
+  margin-left: 5%;
+  margin-right: 5%;
 }

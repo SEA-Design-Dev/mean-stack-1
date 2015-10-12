@@ -29,27 +29,6 @@
   }
 }
 
-.l-page-header {
-  display: flex;
-  flex-direction: column;
-  margin: 0;
-  padding-top: 5%;
-  padding-bottom: 5%;
-  @media (min-width: 500px) {
-  // ***adjust to appropriate breakpoint width/
-    flex-direction: row;
-    align-items: center;
-    & h1 {
-      padding-left: 10%;
-      margin-right: auto;
-    }
-    & .site-nav {
-      margin: auto;
-      padding-right: 10%;
-    }
-  }
-}
-
 .content {
   & header, & footer {
     background-color: $color-highlight;
@@ -76,11 +55,3 @@
     color: $color-background;
   }
 }
-
-
-
-
-.links {
-  // width: 1%;
-}
-

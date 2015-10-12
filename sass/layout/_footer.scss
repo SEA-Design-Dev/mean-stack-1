@@ -19,6 +19,15 @@
   }
 }
 
+.links {
+  padding-bottom: 5%;
+  width: auto;
+  margin-left: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
 .contact-info {
   @include set-font ($color-high-contrast, $font-normal);
   display: flex;

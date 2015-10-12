@@ -14,7 +14,7 @@ require("angular-route");
       controller: "BlogsCtrl as vm",
     })
     .when("/blogs/new", {
-      templateUrl: "views/blogs/blog_form.html",
+      templateUrl: "views/blog/blog_form.html",
       controller: "BlogFormCtrl as vm",
     })
     .when("/blogs/:blog_id/edit", {

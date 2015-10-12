@@ -12,7 +12,7 @@ module.exports = {
   //   dest: dest + "/assets/""
   // },
   sass: {
-    src: src + "/sass/**/*.{sass,scss}",
+    src: src + "/sass/**/*.scss",
     dest: dest + "/css/"
   },
   html: {

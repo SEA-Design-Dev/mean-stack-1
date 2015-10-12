@@ -12,6 +12,8 @@
     border-radius: 100%;
     width: 8.5em;
     padding: 3.45em 0;
+    margin-left: 2%;
+    margin-right: 2%;
   }
   span {
     @extend %social-icons;

@@ -15,11 +15,4 @@ module.exports = {
     src: src + "/app/**/*.html",
     dest: dest + "/views/",
   },
-  // server: {
-  //   src: dest,
-  //   livereload: true,
-  //   directoryListing: false,
-  //   open: false,
-  //   port: 9000
-  // },
 };

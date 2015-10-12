@@ -1,0 +1,131 @@
+.blog-post-footer {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  height: 5em;
+  width: 100%;
+  padding-bottom: 5%;
+  border-bottom: 1px solid $color-low-contrast;
+}
+
+.credits {
+  @include set-font ($color-low-contrast, $font-small, $font-light);
+  font-style: italic;
+}
+
+.l-credits {
+  & li {
+    padding-right: 2%;
+  }
+  & span {
+    padding-right: 2%;
+  }
+}
+
+.contact .button {
+  @include button($color-low-contrast, $color-highlight, $font-smaller, $color-high-contrast, $color-background);
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+.contact {
+  border-top: 1px solid $color-low-contrast;
+  & h3 {
+    @include set-font ($color-background, $font-largest, $font-medium);
+  }
+  & p {
+    @include set-font ($color-background, $font-small);
+  }
+  & header {
+    padding-bottom: 5%;
+  }
+}
+
+.links {
+  padding-bottom: 5%;
+  width: auto;
+  margin-left: auto;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.contact-info {
+  @include set-font ($color-high-contrast, $font-normal);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  min-width: 58%;
+  -webkit-box-align: end;
+  -webkit-align-items: flex-end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  & div {
+    margin: 0 3% 0 3%;
+  }
+  & address {
+    min-width: 30%;
+    font-style: normal;
+  }
+}
+
+.social-media-contact {
+  width: 38%;
+}
+
+small {
+  @include set-font ($color-high-contrast, $font-tiny);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-top: 0.25%; 
+  padding-right: 35%; 
+  padding-bottom: 0.25%; 
+  padding-left:   35%;
+  border-top: 1px solid $color-low-contrast;
+  & a {
+    -webkit-box-flex: 0.01;
+    -webkit-flex-grow: 0.01;
+        -ms-flex-positive: 0.01;
+            flex-grow: 0.01;
+  }
+  & p {
+    -webkit-box-flex: 0.01;
+    -webkit-flex-grow: 0.01;
+        -ms-flex-positive: 0.01;
+            flex-grow: 0.01;
+    text-transform: capitalize;
+  }
+}

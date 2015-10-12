@@ -22,4 +22,57 @@
   & textarea {
     height: 5em;
   }
+  @media (max-width: 500px) {
+    & .title {
+      font-size: $font-larger;
+    }
+    & .copy {
+      font-size: $font-large;
+    }
+  }
+}
+
+.blog-post-footer {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  height: 5em;
+  width: 100%;
+  padding-bottom: 5%;
+  border-bottom: 1px solid $color-low-contrast;
+  @media (max-width: 500px) {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  }
+  @media (max-width: 500px) {
+    height: 8em;
+  }
+}
+
+.credits {
+  @include set-font ($color-low-contrast, $font-small, $font-light);
+  font-style: italic;
+}
+
+.l-credits {
+  & li {
+    padding-right: 2%;
+  }
+  & span {
+    padding-right: 2%;
+  }
+  @media (max-width: 500px) {
+    & span {
+      display: none;
+    }
+  }
 }

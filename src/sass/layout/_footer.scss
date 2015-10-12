@@ -1,72 +1,22 @@
-.contact .button {
-  @include button($color-low-contrast, $color-highlight, $font-smaller, $color-high-contrast, $color-background);
-  margin-left: 5%;
-  margin-right: 5%;
-}
-
 .footer-main {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
   margin: 2% 7% 2% 7%;
-  justify-content: space-between;
-}
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  @media (max-width: 500px) {
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
 
-.contact {
-  border-top: 1px solid $color-low-contrast;
-  & h3 {
-    @include set-font ($color-background, $font-largest, $font-medium);
-  }
-  & p {
-    @include set-font ($color-background, $font-small);
-  }
-  & header {
-    padding-bottom: 5%;
-  }
-}
-
-.links {
-  padding-bottom: 5%;
-  width: auto;
-  margin-left: auto;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-}
-
-.contact-info {
-  @include set-font ($color-high-contrast, $font-normal);
-  display: flex;
-  flex-direction: row;
-  min-width: 58%;
-  align-items: flex-end;
-  & div {
-    margin: 0 3% 0 3%;
-  }
-  & address {
-    min-width: 30%;
-    font-style: normal;
-  }
-}
-
-.social-media-contact {
-  width: 38%;
-}
-
-small {
-  @include set-font ($color-high-contrast, $font-tiny);
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  padding-top: 0.25%; 
-  padding-right: 35%; 
-  padding-bottom: 0.25%; 
-  padding-left:   35%;
-  border-top: 1px solid $color-low-contrast;
-  & a {
-    flex-grow: 0.01;
-  }
-  & p {
-    flex-grow: 0.01;
-    text-transform: capitalize;
   }
 }

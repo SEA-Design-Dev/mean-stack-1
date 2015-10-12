@@ -1,31 +1,24 @@
-.content {
-  .header {
-  }
-  .footer {
-
-  }
-  .social-media-share {
-    background-color: gray;
-  }
-  .social-media-contact {
-    background-color: black;
-  }
-}
-
 .l-content {
   & header h1, & footer {
     margin: 0; 
     padding: 5% 5% 2% 10%;
   }
   & header h2 {
-    padding: 0% 35% 10% 10%;
+    padding: 0 35% 10% 10%;
   }
   & .site-nav {
     padding-left: 10%;
   }
   & .l-social-media-share {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: row;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+            flex-direction: row;
     list-style: none;
     padding-right: 10%;
     margin-left: auto;
@@ -33,9 +26,9 @@
       margin-left: 5%;
       margin-right: 5%;
     }
-  }
-  & footer {
-      
+    @media (max-width: 500px) {
+      margin-left: 10%;
+    }
   }
 }
 
@@ -48,37 +41,37 @@
     margin-bottom: 1.5%;
   }
   .l-credits {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: row;
-    flex-grow: 1;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-flex: 1;
+    -webkit-flex-grow: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+    @media (max-width: 500px) {
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    }
   }
 }
 
 .l-add {
   margin: 3% auto 3% auto;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-}
-
-.blog-post-footer {
-  display: flex;
-  flex-direction: row;
-  height: 5em;
-  width: 100%;
-  padding-bottom: 5%;
-  border-bottom: 1px solid $color-low-contrast;
-}
-
-.credits {
-  @include set-font ($color-low-contrast, $font-small, $font-light);
-  font-style: italic;
-}
-
-.l-credits {
-  & li {
-    padding-right: 2%;
-  }
-  & span {
-    padding-right: 2%;
-  }
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }

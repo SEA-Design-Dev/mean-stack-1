@@ -1,0 +1,15 @@
+<div class="posts l-posts">
+  <article class="blogs">
+    <h1 class="title">{{vm.blog.title}}</h1>
+    <p class="copy">{{vm.blog.content}}</p>
+    <div class="blog-post-footer">
+      <ul class="credits l-credits">
+        <li>{{vm.blog.author}}</li><span>•</span>
+        <li>{{vm.blog.date}}</li><span>•</span>
+        <li>{{vm.blog.comments}}</li>
+      </ul>
+      <a href="#/blogs/{{vm.blog._id}}/edit" class="button">Edit Post</a>
+      <button ng-click="vm.delete(vm.blog)" class="button">Delete Post</button>
+    </div>
+  </article>
+</div>

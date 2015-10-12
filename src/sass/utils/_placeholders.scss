@@ -12,3 +12,46 @@
   transition: color 0.25s, background-color 0.25s;
   color: $color-background;
 }
+
+.site-nav {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  transition: color 0.5s, background-color 0.5s;
+  & a {
+    padding: 0 5% 0 5%;
+  }
+  & span {
+    padding: 0 13% 0 13%;
+  }
+  & a:visited {
+    color: $color-low-contrast;
+  }
+}
+
+.content {
+  & header, & footer {
+    background-color: $color-highlight;
+  }
+  & header {
+    & h1 {
+      font-family: $secondary-font;
+      color: $color-high-contrast;
+      font-size: $font-huge;
+      font-weight: $font-regular;
+    } 
+    & h2 {
+      font-family: $secondary-font;
+      color: $color-highlight-contrast;
+      font-size: $font-larger;
+      font-weight: $font-light;
+    }
+  }
+  & .site-nav a {
+    @include set-font ($color-high-contrast, $font-smallest, $font-bold, auto, uppercase);
+  }
+  & .site-nav a:hover{
+    background-color: $color-high-contrast;
+    color: $color-background;
+  }
+}

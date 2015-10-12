@@ -1,0 +1,25 @@
+.posts {
+  padding-left: 20%;
+  padding-right: 20%;
+  & .title {
+    @include set-font ($color-high-contrast, $font-largest, $font-medium);
+  }
+  & .copy {
+    @include set-font ($color-low-contrast, $font-large, $font-light);
+  }
+  & article {
+    padding-top: 7%;
+  }
+  & .button {
+    @include button($color-background, $color-high-contrast, $font-smallest);
+  }
+  & input, & textarea {
+    border: 0;
+  }
+  & textarea, & .title {
+    width: 100%;
+  }
+  & textarea {
+    height: 5em;
+  }
+}

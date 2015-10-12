@@ -1,15 +1,6 @@
 .posts {
   padding-left: 20%;
   padding-right: 20%;
-  & .ng-dirty {
-      color: $color-high-contrast;
-    & .ng-valid {
-      background-color: $color-highlight;
-    }
-    & .ng-invalid {
-      background-color: $color-invalid;
-    }
-  }
   & h1 {
     @include set-font ($color-high-contrast, $font-largest, $font-medium);
   }

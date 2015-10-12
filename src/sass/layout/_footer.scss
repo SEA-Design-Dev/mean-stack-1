@@ -8,8 +8,9 @@
   top: 20%;
   display: flex;
   flex-direction: row;
-  margin-left: 20%;
-  margin-right: 20%;
+  margin-left: 7%;
+  margin-right: 7%;
+  justify-content: space-between;
 }
 
 .contact {
@@ -41,7 +42,8 @@
 }
 
 .social-media-contact {
-  color: blue;
+  width: 60%;
+  margin-left: auto;
 }
 
 small {

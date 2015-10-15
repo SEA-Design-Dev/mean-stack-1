@@ -34,14 +34,23 @@
 
 .l-pagination-button {
   width: 30%;
-  min-height: 5em;
+  height: 4em;
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
+  text-align: center;
+  align-items: center;
   & .l-pagination-button-prev {
-    align-self: flex-start;
+    margin-right: auto;
+    min-width: 35%;
+    min-height: 50%;
+    line-height: 2;
   }
   & .l-pagination-button-next {
     margin-left: auto;
+    min-width: 35%;
+    min-height: 50%;
+    line-height: 2;
   }
 }
 

@@ -16,29 +16,4 @@ var requireDir = require('require-dir');
 // Require all tasks in gulp/tasks, including subfolders
 requireDir('./gulp/tasks', { recurse: true });
 
-// var gulp = require("gulp");
-// var sass = require("gulp-sass");
-// var webpack = require("webpack-stream");
-
-// gulp.task("sass", function() {
-//   return gulp.src("src/sass/**/*.scss")
-//   .pipe(sass().on("error", sass.logError))
-//   .pipe(gulp.dest("public/css/"));
-// });
-
-// gulp.task('webpack', function() {
-//   return gulp.src("src/app/**/*.js")
-//   .pipe(webpack({
-//     output: {
-//       filename: "main.js"
-//     }
-//   }))
-//   .pipe(gulp.dest('public/js/'));
-// });
-
-// gulp.task("default", ["sass", "webpack"], function() {
-//   gulp.watch("src/sass/**/*.scss", ["sass"]);
-//   gulp.watch("src/app/**/*.js", ["webpack"]);
-// });
-
 

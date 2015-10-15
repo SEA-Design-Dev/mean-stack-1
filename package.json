@@ -29,7 +29,6 @@
     "gulp-sass": "^2.0.4",
     "gulp-sourcemaps": "^1.6.0",
     "jshint-stylish": "^2.0.1",
-    "mongoose": "^4.1.10",
     "require-dir": "^0.3.0",
     "webpack-stream": "^2.1.1"
   }

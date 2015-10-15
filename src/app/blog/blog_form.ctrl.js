@@ -13,14 +13,6 @@ require("../app.js");
 
     initialize();
 
-    // function initialize () {
-    //   if ($routeParams.blog_id) {
-    //     BlogsService.get($routeParams.blog_id).then(function (resp) {
-    //       vm.blog = resp.data;
-    //     });
-    //   }
-    // }
-
     function initialize() {
       if ($routeParams.blog_id) {
         BlogsService
@@ -61,23 +53,45 @@ require("../app.js");
     }
 
     function saveForm () {
-      var method;
-      var postObj = {
-        "description": vm.blog.title,
-        "public": true,
-        "files": {
-          "blog": {
-            "content": vm.blog.content
+      var mode;
+      var updateInfo = {
+        id: vm.blog.id,
+        method: "update",
+        successMsg: "updated",
+        errorMsg: "Could not update ",
+        model: {
+          "description": vm.blog.title,
+          "files": {
+            "blog": {
+              "content": vm.blog.content
+            }
+          }
+        }
+      };
+      var createInfo = {
+        method: "create",
+        successMsg: "created",
+        errorMsg: "Could not create ",
+        model: {
+          "description": vm.blog.title,
+          "public": true,
+          "files": {
+            "blog": {
+              "content": vm.blog.content
+            }
           }
         }
       };
 
-      method = $routeParams.blog_id ? "update" : "create";
-      BlogsService[method](postObj).then(function (resp) {
+      mode = $routeParams.blog_id ? updateInfo : createInfo;
+
+      console.log(mode.id, mode.model);
+
+      BlogsService[mode.method](mode).then(function (resp) {
         $location.path("/blogs/" + resp.data.id);
-        $log.info("created", resp);
+        $log.info(mode.successMsg, resp);
       }, function (resp) {
-        $log.error("Could not create " + resp);
+        $log.error(mode.errorMsg + resp);
       });
     }
   }]);

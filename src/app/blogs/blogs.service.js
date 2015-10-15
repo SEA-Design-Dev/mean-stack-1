@@ -6,26 +6,22 @@ var token = require("../token.js");
 (function () {
 
   angular.module("intellyBlog").service("BlogsService", ["$http", function ($http) {
-    var urlRoot = "/api/blogs";
 
     var Blog = {
       get: function (id) {
-        return $http.get("https://api.github.com/users/hollislau/gists", {
-          headers: {
-            "Authorization": "token " + token.oauthToken,
-          }
-        });
-
-        // if (angular.isDefined(id)) {
-        //   return ;
-        // } else {
-        //   return ;
-        // }
-        // if (angular.isDefined(id)) {
-        //   return $http.get(urlRoot + "/" + id);
-        // } else {
-        //   return $http.get(urlRoot);
-        // }
+        if (angular.isDefined(id)) {
+          return $http.get("https://api.github.com/gists/" + id, {
+            headers: {
+              "Authorization": "token " + token.oauthToken,
+            }
+          });
+        } else {
+          return $http.get("https://api.github.com/users/hollislau/gists", {
+            headers: {
+              "Authorization": "token " + token.oauthToken,
+            }
+          });
+        }
       },
       update: function (model) {
         return $http.put(urlRoot + "/" + model._id, model);

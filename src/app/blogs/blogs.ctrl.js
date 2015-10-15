@@ -27,11 +27,9 @@ require("../filters/pager.filter.js");
     initialize();
 
     function initialize () {
-      getBlogs();
-    }
-
-    function getBlogs () {
-      BlogsService.get().then(successHandler, errorHandler);
+      BlogsService
+        .get()
+        .then(successHandler, errorHandler);
     }
 
     function successHandler (resp) {
@@ -41,7 +39,8 @@ require("../filters/pager.filter.js");
         var blogObj = gist.files.blog;
 
         if (angular.isDefined(blogObj)) {
-          $http.get(blogObj.raw_url)
+          $http
+            .get(blogObj.raw_url)
             .then(function (resp) {
               setBlogInfo(gist, resp.data);
             }, function (resp) {

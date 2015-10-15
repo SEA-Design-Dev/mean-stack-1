@@ -1,18 +1,26 @@
 "use strict";
 
 require("../app.js");
+var token = require("../token.js");
 
 (function () {
 
   angular.module("intellyBlog").service("BlogsService", ["$http", function ($http) {
-    var urlRoot = "/api/blogs";
 
     var Blog = {
       get: function (id) {
         if (angular.isDefined(id)) {
-          return $http.get(urlRoot + "/" + id);
+          return $http.get("https://api.github.com/gists/" + id, {
+            headers: {
+              "Authorization": "token " + token.oauthToken,
+            }
+          });
         } else {
-          return $http.get(urlRoot);
+          return $http.get("https://api.github.com/users/hollislau/gists", {
+            headers: {
+              "Authorization": "token " + token.oauthToken,
+            }
+          });
         }
       },
       update: function (model) {

@@ -4,7 +4,7 @@ require("../app.js");
 
 (function () {
 
-  angular.module("intellyBlog").controller("BlogCtrl", ["BlogsService", "$routeParams", "$location", function (BlogsService, $routeParams, $location) {
+  angular.module("intellyBlog").controller("BlogCtrl", ["BlogsService", "$routeParams", "$http", "$filter", "$log", "$q", "$location", function (BlogsService, $routeParams, $http, $filter, $log, $q, $location) {
     var vm = this;
 
     vm.delete = deleteBlog;
@@ -14,9 +14,38 @@ require("../app.js");
     function initialize() {
       BlogsService
         .get($routeParams.blog_id)
+        .then(successHandler, errorHandler);
+    }
+
+    function successHandler (resp) {
+      var data = resp.data;
+      var blogObj = data.files.blog;
+
+      $http
+        .get(blogObj.raw_url)
         .then(function (resp) {
-          vm.blog = resp.data;
+          setBlogInfo(data, resp.data);
+        }, function (resp) {
+          $log.error("Could not request " + blogObj.raw_url, resp);
         });
+
+      $log.info("response", resp);
+    }
+
+    function errorHandler (resp) {
+      vm.error = resp.data;
+      $log.error("response", resp);
+    }
+
+    function setBlogInfo (gist, content) {
+      vm.blog = {
+        title: gist.description,
+        content: content,
+        author: gist.owner.login,
+        date: $filter("date")(gist.updated_at),
+        comments: gist.comments + " comments",
+        id: gist.id
+      };
     }
 
     function deleteBlog (blog) {

@@ -14,6 +14,8 @@
   <div class="l-add">
     <a href="#/blogs/new" class="button">Add Post</a>
   </div>
-  <a class="button" type="button" ng-click="vm.pagination.prevPage()" ng-if="vm.pagination.currentPage>0">Prev</a>
-  <a class="button" type="button" ng-click="vm.pagination.nextPage()" ng-if="vm.pagination.currentPage<vm.blogs.length/vm.pagination.perPage-1">Next</a>
+  <div class="l-pagination-button">
+    <div class="l-pagination-button-prev"><a class="button" type="button" ng-click="vm.pagination.prevPage()" ng-if="vm.pagination.currentPage>0">Prev</a></div>
+    <div class="l-pagination-button-next"><a class="button" type="button" ng-click="vm.pagination.nextPage()" ng-if="vm.pagination.currentPage<vm.blogs.length/vm.pagination.perPage-1">Next</a></div>
+  </div>
 </div>

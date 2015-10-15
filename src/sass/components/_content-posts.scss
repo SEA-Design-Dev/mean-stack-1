@@ -12,6 +12,8 @@
   }
   & .button {
     @include button($color-background, $color-high-contrast, $font-smallest);
+    min-width: 25%;
+    line-height: 2;
   }
   & input, & textarea {
     border: 0;
@@ -29,6 +31,28 @@
     & .copy {
       font-size: $font-large;
     }
+  }
+}
+
+.l-pagination-button {
+  width: 30%;
+  height: 4em;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  text-align: center;
+  align-items: center;
+  & .l-pagination-button-prev {
+    margin-right: auto;
+    min-width: 35%;
+    min-height: 50%;
+    line-height: 2;
+  }
+  & .l-pagination-button-next {
+    margin-left: auto;
+    min-width: 35%;
+    min-height: 50%;
+    line-height: 2;
   }
 }
 

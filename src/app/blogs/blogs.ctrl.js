@@ -12,7 +12,7 @@ require("../filters/pager.filter.js");
 
     vm.pagination = {
       currentPage: 0,
-      perPage: 2,
+      perPage: 4,
       getOffset: function () {
         return vm.pagination.currentPage * vm.pagination.perPage;
       },

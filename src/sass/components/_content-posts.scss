@@ -12,6 +12,8 @@
   }
   & .button {
     @include button($color-background, $color-high-contrast, $font-smallest);
+    min-width: 25%;
+    line-height: 2;
   }
   & input, & textarea {
     border: 0;

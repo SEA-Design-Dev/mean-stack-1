@@ -27,10 +27,19 @@ var token = require("../token.js");
         return $http.put(urlRoot + "/" + model._id, model);
       },
       create: function (model) {
-        return $http.post(urlRoot, model);
+        return $http.post("https://api.github.com/gists", model, {
+          headers: {
+            "Authorization": "token " + token.oauthToken,
+          }
+        });
       },
       delete: function (model) {
-        return $http.delete(urlRoot + "/" + model._id);
+        return $http.delete("https://api.github.com/gists/" + model.id, {
+          headers: {
+            "Authorization": "token " + token.oauthToken,
+          }
+        });
+        // return $http.delete(urlRoot + "/" + model._id);
       }
     };
     return Blog;

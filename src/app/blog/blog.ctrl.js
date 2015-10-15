@@ -29,12 +29,12 @@ require("../app.js");
           $log.error("Could not request " + blogObj.raw_url, resp);
         });
 
-      $log.info("response", resp);
+      $log.info("read", resp);
     }
 
     function errorHandler (resp) {
       vm.error = resp.data;
-      $log.error("response", resp);
+      $log.error("Could not read " + resp);
     }
 
     function setBlogInfo (gist, content) {
@@ -49,8 +49,11 @@ require("../app.js");
     }
 
     function deleteBlog (blog) {
-      BlogsService.delete(blog).then(function () {
+      BlogsService.delete(blog).then(function (resp) {
         $location.path("/blogs");
+        $log.info("deleted", resp);
+      }, function (resp) {
+        $log.error("Could not delete " + resp);
       });
     }
 

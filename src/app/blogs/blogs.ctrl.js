@@ -11,7 +11,7 @@ require("../filters/pager.filter.js");
     vm.blogs = [];
 
     vm.pagination = {
-      currentPage: 1,
+      currentPage: 0,
       perPage: 2,
       getOffset: function () {
         return vm.pagination.currentPage * vm.pagination.perPage;

@@ -65,7 +65,7 @@
 }
 
 .l-add {
-  margin: 3% auto 3% auto;
+  margin: 3% 0 3% 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -74,4 +74,7 @@
   -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
+  & a {
+    margin-left: auto;
+  }
 }

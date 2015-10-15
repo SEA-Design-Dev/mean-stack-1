@@ -18,9 +18,11 @@
   "homepage": "https://github.com/hollislau/mean-stack-1",
   "dependencies": {
     "angular": "^1.4.7",
+    "angular-cookies": "^1.4.7",
     "angular-route": "^1.4.7",
     "body-parser": "^1.14.1",
     "express": "^4.13.3",
+    "github-api": "^0.10.6",
     "gulp": "^3.9.0",
     "gulp-csslint": "^0.2.0",
     "gulp-express": "^0.3.5",

@@ -6,6 +6,6 @@ angular.module("intellyBlog").filter("offset", ["$filter", function ($filter) {
       start = parseInt(start, 10);
       console.log(input.slice(start));
       return input.slice(start);
-    };
+    }
   };
 }]);

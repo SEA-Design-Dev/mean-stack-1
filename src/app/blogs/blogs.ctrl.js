@@ -49,12 +49,12 @@ require("../filters/pager.filter.js");
         }
       });
 
-      $log.info("response", resp);
+      $log.info("read", resp);
     }
 
     function errorHandler (resp) {
       vm.error = resp.data;
-      $log.error("response", resp);
+      $log.error("Could not read " + resp);
     }
 
     function setBlogInfo (gist, content) {

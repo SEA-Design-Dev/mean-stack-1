@@ -3,6 +3,7 @@
 require("../app.js");
 
 var token = require("../token.js");
+var rootUrl = "https://api.github.com";
 var headerAuth = {"Authorization": "token " + token.oauthToken};
 
 (function () {
@@ -12,27 +13,27 @@ var headerAuth = {"Authorization": "token " + token.oauthToken};
     var Blog = {
       get: function (id) {
         if (angular.isDefined(id)) {
-          return $http.get("https://api.github.com/gists/" + id, {
+          return $http.get(rootUrl + "/gists/" + id, {
             headers: headerAuth
           });
         } else {
-          return $http.get("https://api.github.com/users/hollislau/gists", {
+          return $http.get(rootUrl + "/users/hollislau/gists", {
             headers: headerAuth
           });
         }
       },
       update: function (model) {
-        return $http.patch("https://api.github.com/gists/" + model.id, model.model, {
+        return $http.patch(rootUrl + "/gists/" + model.id, model.model, {
           headers: headerAuth
         });
       },
       create: function (model) {
-        return $http.post("https://api.github.com/gists", model.model, {
+        return $http.post(rootUrl + "/gists", model.model, {
           headers: headerAuth
         });
       },
       delete: function (model) {
-        return $http.delete("https://api.github.com/gists/" + model.id, {
+        return $http.delete(rootUrl + "/gists/" + model.id, {
           headers: headerAuth
         });
       }

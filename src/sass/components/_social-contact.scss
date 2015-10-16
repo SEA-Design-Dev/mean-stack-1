@@ -14,6 +14,9 @@
     padding: 3.45em 0;
     margin-left: 2%;
     margin-right: 2%;
+    &:hover {
+      color: $color-highlight;
+    }
   }
   span {
     @extend %social-icons;

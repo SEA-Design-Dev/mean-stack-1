@@ -12,4 +12,7 @@
   -webkit-transition: color 0.25s, background-color 0.25s;
           transition: color 0.25s, background-color 0.25s;
   color: $color-background;
+  &:hover {
+    color: $color-highlight;
+  }
 }

@@ -15,9 +15,20 @@
     background-color: $color-background;
     color: $color-low-contrast;
     font-size: $font-smaller;
+    &:hover {
+      background-color: $color-highlight;
+      color: $color-low-contrast;
+    }
+  }
+}
+
+.social-share, .pinterest-container {
+  &:hover {
+    cursor: pointer;
   }
 }
 
 .social-share span, .pinterest-container span {
   display: none;
 }
+

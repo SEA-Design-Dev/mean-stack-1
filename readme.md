@@ -1,3 +1,9 @@
+# NOTE TO INSTRUCTORS FOR GRADING:
+
+You will need a Github API token to make this app work properly. Create a "token.js" file in the "src" directory and create a module.exports object with a property and value of "oauthToken" and your API key, respectively. Just run "npm install" followed by "gulp", and you should now be able to CRUD some sample blogs on your own Gist account. Enjoy!
+
+
+
 # Week Six - MEAN Stack I
 
 Last week we focussed on JavaScript basics. This week we're going to build up a function web application. You'll be expected to build on knowledge you've already learned (semantic HTML, Sass instead of CSS, in addition to all of the Angular work we'll be doing) and produce a "production-ready" blog for your assignment this week.
@@ -11,15 +17,15 @@ You can download the view that you are to complete [here](https://github.com/SEA
 
 ## The spec
 
-As a product owner, I need a functional prototype of the application. The final prototype must be visible in a desktop browser. 
+As a product owner, I need a functional prototype of the application. The final prototype must be visible in a desktop browser.
 
-Prototype is to use best practices in coding HTML/CSS as there is the potential that some or all of the code will made it into production. 
+Prototype is to use best practices in coding HTML/CSS as there is the potential that some or all of the code will made it into production.
 
-Aside from images as content, all visual assets should be produced via CSS or typography. The only background image asset allowed will be the main page header. 
+Aside from images as content, all visual assets should be produced via CSS or typography. The only background image asset allowed will be the main page header.
 
 The user should be able to create, read, update, and delete blog posts from the application. There should be at least two different views - one a list of available blog posts, the other a detail view of the blog post. You do not need to worry about authentication or user management for this assignment.
 
-### Requirements 
+### Requirements
 
 1. Semantically correct HTML is required as this will be the model for prod app integration
 1. Think in terms of '*components*'; if all parts of the UI were lego blocks, who would you code that?
@@ -30,15 +36,15 @@ The user should be able to create, read, update, and delete blog posts from the 
 1. Write up a description for every plugin used (no limit, but you must justify them)
   1. jQuery is not allowed. Angular's built-in DOM manipulation can manage most of what you'd need jQuery for.
 
-### Constraints 
+### Constraints
 
 1. Must work in all major browsers of latest versions;
 	* Desktop (IE Edge, Safari, Chrome and Firefox)
 1. All interactions must be clearly functional
 1. All code must pass HTML Tidy, CSS Lint, and JSHint.
 
-__DO NOT__ fence yourself in with invisible constraints. Unless it is specifically listed and/or we discussed it in lecture, there is not an expectation to meet an objective that has not been set. 
+__DO NOT__ fence yourself in with invisible constraints. Unless it is specifically listed and/or we discussed it in lecture, there is not an expectation to meet an objective that has not been set.
 
-## The expectation 
+## The expectation
 
 In this assignment, you should be able to demonstrate mastery over the basics of Angular as well as creating a simple CRUD application. We're looking for you to build on best practices that you've already learned (proper HTML and CSS) as well as incorporate the new practices discussed during the course of the week.

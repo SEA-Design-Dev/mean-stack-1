@@ -1,0 +1,34 @@
+.social-share {
+  @extend %social-icons;
+  background-color: $color-low-contrast;
+  padding: 0.5em;
+  font-size: $font-tiny;
+}
+
+.pinterest-container {
+  border-radius: 100%;
+  background-color: $color-low-contrast;
+  padding: 0.17em 0.25em;
+  margin-top: -2px;
+  .icon-pinterest {
+    @extend %social-icons;
+    background-color: $color-background;
+    color: $color-low-contrast;
+    font-size: $font-smaller;
+    &:hover {
+      background-color: $color-highlight;
+      color: $color-low-contrast;
+    }
+  }
+}
+
+.social-share, .pinterest-container {
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.social-share span, .pinterest-container span {
+  display: none;
+}
+

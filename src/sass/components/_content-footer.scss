@@ -1,0 +1,119 @@
+.contact .button {
+  @include button($color-low-contrast, $color-highlight, $font-smaller, $color-high-contrast, $color-background);
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+.contact {
+  border-top: 1px solid $color-low-contrast;
+  & h3 {
+    @include set-font ($color-background, $font-largest, $font-medium);
+    @media (max-width: 500px) {
+      font-size: $font-large;
+    }
+  }
+  & p {
+    @include set-font ($color-background, $font-small);
+  }
+  & div {
+    padding-bottom: 5%;
+  }
+}
+
+.links {
+  padding-bottom: 5%;
+  width: auto;
+  margin-left: auto;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.contact-info {
+  @include set-font ($color-high-contrast, $font-normal);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  min-width: 58%;
+  -webkit-box-align: end;
+  -webkit-align-items: flex-end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  & div {
+    margin: 0 3% 0 3%;
+  }
+  & address {
+    min-width: 30%;
+    font-style: normal;
+  }
+  @media (max-width: 500px) {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  & div, & address {
+    width: 100%;
+    margin: 5%;
+  }
+  }
+}
+
+.social-media-contact {
+  width: 38%;
+}
+
+.small-print {
+  @include set-font ($color-high-contrast, $font-tiny);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 0.25% 30% 0.25% 30%; 
+  border-top: 1px solid $color-low-contrast;
+  & a, & p {
+    -webkit-box-flex: 0.01;
+    -webkit-flex-grow: 0.01;
+        -ms-flex-positive: 0.01;
+            flex-grow: 0.01;
+    padding: 0 2% 0 2%;
+  }
+  & p {
+    text-transform: capitalize;
+  }
+  @media (max-width: 500px) {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    & a, & p {
+      padding-top: 2%;
+    }
+  }
+}

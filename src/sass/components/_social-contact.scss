@@ -1,0 +1,30 @@
+.social-contact {
+  display: inline;
+  p {
+    display: inline-block;
+    position: relative;
+    color: $color-high-contrast;
+    font-weight: $font-bold;
+    font-size: $font-smallest;
+    text-align: center;
+    text-transform: uppercase;
+    border: 1px solid $color-low-contrast;
+    border-radius: 100%;
+    width: 8.5em;
+    padding: 3.45em 0;
+    margin-left: 2%;
+    margin-right: 2%;
+    &:hover {
+      color: $color-highlight;
+    }
+  }
+  span {
+    @extend %social-icons;
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    font-size: $font-large;
+    background-color: $color-high-contrast;
+    padding: 0.5em;
+  }
+}

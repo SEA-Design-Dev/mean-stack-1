@@ -1,0 +1,25 @@
+<div class="posts l-posts">
+  <div class="l-pagination-button">
+    <a class="l-pagination-button-prev button" type="button" ng-click="vm.pagination.prevPage()" ng-if="vm.pagination.currentPage>0">Prev</a>
+    <a class="l-pagination-button-next button" type="button" ng-click="vm.pagination.nextPage()" ng-if="vm.pagination.currentPage<vm.blogs.length/vm.pagination.perPage-1">Next</a>
+  </div>
+  <article class="blogs" ng-repeat="blog in vm.blogs|pager:vm.pagination">
+    <h1 class="title">{{blog.title}}</h1>
+    <p class="copy">{{blog.content}}</p>
+    <div class="blog-post-footer">
+      <ul class="credits l-credits">
+        <li>{{blog.author}}</li><span>•</span>
+        <li>{{blog.date}}</li><span>•</span>
+        <li>{{blog.comments}}</li>
+      </ul>
+      <a href="#/blogs/{{blog.id}}" class="button">Read More</a>
+    </div>
+  </article>
+  <div class="l-add">
+    <a href="#/blogs/new" class="button">Add Post</a>
+  </div>
+  <div class="l-pagination-button">
+    <a class="l-pagination-button-prev button" type="button" ng-click="vm.pagination.prevPage()" ng-if="vm.pagination.currentPage>0">Prev</a>
+    <a class="l-pagination-button-next button" type="button" ng-click="vm.pagination.nextPage()" ng-if="vm.pagination.currentPage<vm.blogs.length/vm.pagination.perPage-1">Next</a>
+  </div>
+</div>

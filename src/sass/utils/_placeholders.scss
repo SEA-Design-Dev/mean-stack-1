@@ -1,0 +1,18 @@
+%social-icons {
+  font-family: 'intelly-icons';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  border-radius: 100%;
+  -webkit-transition: color 0.25s, background-color 0.25s;
+          transition: color 0.25s, background-color 0.25s;
+  color: $color-background;
+  &:hover {
+    color: $color-highlight;
+  }
+}

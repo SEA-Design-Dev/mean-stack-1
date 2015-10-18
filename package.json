@@ -1,0 +1,35 @@
+{
+  "name": "mean-stack-1",
+  "version": "1.0.0",
+  "description": "Intelly - a simple MEAN stack blog app",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hollislau/mean-stack-1.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hollislau/mean-stack-1/issues"
+  },
+  "homepage": "https://github.com/hollislau/mean-stack-1",
+  "dependencies": {
+    "angular": "^1.4.7",
+    "angular-route": "^1.4.7",
+    "body-parser": "^1.14.1",
+    "express": "^4.13.3",
+    "gulp": "^3.9.0",
+    "gulp-csslint": "^0.2.0",
+    "gulp-express": "^0.3.5",
+    "gulp-jshint": "^1.11.2",
+    "gulp-notify": "^2.2.0",
+    "gulp-sass": "^2.0.4",
+    "gulp-sourcemaps": "^1.6.0",
+    "jshint-stylish": "^2.0.1",
+    "require-dir": "^0.3.0",
+    "webpack-stream": "^2.1.1"
+  }
+}

@@ -1,6 +1,6 @@
 # NOTE TO INSTRUCTORS FOR GRADING:
 
-You will need a Github API token to make this app work properly. Create a "token.js" file in the "src" directory and create a module.exports object with a property and value of "oauthToken" and your API key, respectively. Just run "npm install" followed by "gulp", and you should now be able to CRUD some sample blogs on your own Gist account. Enjoy!
+You will need Hollis' Github API token to make this app work properly. Please refer to the comments attached to his Canvas assignment to find it. Create a "token.js" file in the "src" directory and create a module.exports object with a property and value of "oauthToken" and the API key, respectively. Just run "npm install" followed by "gulp", and you should now be able to CRUD some sample blogs. Enjoy!
 
 
 

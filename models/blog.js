@@ -7,7 +7,6 @@ var BlogSchema = new mongoose.Schema({
   content: String,
   author: String,
   date: String,
-  comments: String
 });
 
 module.exports = mongoose.model("Blog", BlogSchema);

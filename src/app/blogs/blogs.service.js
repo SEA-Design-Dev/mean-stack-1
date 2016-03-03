@@ -1,8 +1,8 @@
-"use strict";
-
 require("../app.js");
 
 (function () {
+
+  "use strict";
 
   angular.module("intellyBlog").service("BlogsService", ["$http", function ($http) {
     var urlRoot = "/api/blogs";

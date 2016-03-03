@@ -6,8 +6,12 @@ A responsive, single-page blog app was reconstructed from a provided design comp
 
 *You must have Node.js, npm, and MongoDB installed locally.*
 
+In the terminal:
+
 1. Clone this repository
-2. Run `npm install` in the terminal
-3. Start MongoDB
-4. Run either `gulp` or `node server` in the terminal
-5. Open a browser and view the app at **localhost:5000**
+2. Navigate to the root directory of the cloned repository
+3. Run `npm install`
+4. Start MongoDB
+5. Run either `gulp` or `node server`
+
+Open a web browser and view the app at **localhost:5000**.

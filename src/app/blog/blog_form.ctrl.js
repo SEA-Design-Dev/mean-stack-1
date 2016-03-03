@@ -1,8 +1,8 @@
-"use strict";
-
 require("../app.js");
 
 (function () {
+
+  "use strict";
 
   angular.module("intellyBlog").controller("BlogFormCtrl", ["BlogsService", "$routeParams", "$location", "$filter", function (BlogsService, $routeParams, $location, $filter) {
     var vm = this;

@@ -30,7 +30,6 @@ blogsRoute.post(function (req, res) {
   blog.content = req.body.content;
   blog.author = req.body.author;
   blog.date = req.body.date;
-  blog.comments = req.body.comments;
 
   blog.save(function (err) {
     if (err) {
@@ -77,7 +76,6 @@ blogRoute.put(function (req, res) {
     blog.content = req.body.content;
     blog.author = req.body.author;
     blog.date = req.body.date;
-    blog.comments = req.body.comments;
 
     blog.save(function (err) {
       if (err) {

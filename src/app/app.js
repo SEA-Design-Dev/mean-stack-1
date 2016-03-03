@@ -1,9 +1,9 @@
-"use strict";
-
 require("angular");
 require("angular-route");
 
 (function () {
+
+  "use strict";
 
   var app = angular.module("intellyBlog", ["ngRoute"]);
 

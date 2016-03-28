@@ -17,7 +17,7 @@
   },
   "homepage": "https://github.com/hollislau/mean-stack-1",
   "dependencies": {
-    "angular": "^1.4.7",
+    "angular": "1.4.x",
     "angular-route": "^1.4.7",
     "body-parser": "^1.14.1",
     "express": "^4.13.3",
@@ -32,5 +32,8 @@
     "mongoose": "^4.1.10",
     "require-dir": "^0.3.0",
     "webpack-stream": "^2.1.1"
+  },
+  "engines": {
+    "node": "0.12.x"
   }
 }
